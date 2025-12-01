@@ -115,7 +115,7 @@ This project implements a comprehensive software solution for controlling an RCW
 ### PC Setup
 ```bash
 # Clone the repository
-git clone https://github.com/pobpapon99/Mechanical-project.git
+git clone https://github.com/pobpapon/Mechanical-project.git
 cd Mechanical-project/pc-side
 
 # Install dependencies
@@ -264,7 +264,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Your Name**
 
-- GitHub: [@pobpapon99](https://github.com/pobpapon99)
+- GitHub: [@pobpapon](https://github.com/pobpapon)
 - Email: pobpapon99@gmail.com
 
 ---
