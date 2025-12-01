@@ -1,0 +1,39 @@
+void __setup_serial__()
+{
+  Serial.begin(9600);
+  Serial.setTimeout(10);
+  Serial.println(deviceName);
+}
+
+void __ctrl_serial__() {
+  if (Serial.available()) {
+    String getSerial = Serial.readStringUntil('\n');
+    getSerial.trim();
+    Serial.println(getSerial);
+
+    if (getSerial == "trigger1.0") {
+      triggerState = 1;
+    } else if (getSerial == "trigger0.0") {
+      triggerState = 0;
+    } else if (getSerial == "lock1.0") {
+      pitchLock = 1;
+    } else if (getSerial == "lock0.0") {
+      pitchLock = 0;
+    } else if (getSerial.startsWith("pitch_rotate")) {
+      String numPart = getSerial.substring(12);
+      currentPitch = numPart.toFloat();
+      StepSpd[1] = long(currentPitch * 100.0);
+      StepSpd[1] = constrain(StepSpd[1], -10000, 10000);
+      if (abs(StepSpd[1]) <= 200) StepSpd[1] = 0;
+      __update__lcd();
+    } else if (getSerial.startsWith("yaw_rotate")) {
+      String numPart = getSerial.substring(10);
+      currentYaw = numPart.toFloat();
+      StepSpd[0] = long(currentYaw * 100.0);
+      StepSpd[0] = constrain(StepSpd[0], -10000, 10000);
+      if (abs(StepSpd[0]) <= 200) StepSpd[0] = 0;
+      __update__lcd();
+    }
+  }
+}
+
