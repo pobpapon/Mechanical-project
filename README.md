@@ -207,15 +207,6 @@ Mechanical-project/
 
 ---
 
-## 🎥 Demo
-
-> Add demo video or GIF here
-```markdown
-![Demo](path/to/demo.gif)
-```
-
----
-
 ## ⚙️ Configuration
 
 <details>
