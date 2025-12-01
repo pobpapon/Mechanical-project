@@ -1,4 +1,4 @@
-# 🎯 Mechanical Project - RCWS Control System
+#  Mechanical Project - RCWS Control System
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.8+-blue.svg" alt="Python">
@@ -115,7 +115,7 @@ This project implements a comprehensive software solution for controlling an RCW
 ### PC Setup
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/Mechanical-project.git
+git clone https://github.com/pobpapon99/Mechanical-project.git
 cd Mechanical-project/pc-side
 
 # Install dependencies
