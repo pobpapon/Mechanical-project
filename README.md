@@ -99,7 +99,7 @@ This project implements a comprehensive software solution for controlling an RCW
   <tr>
     <td>Raspberry Pi</td>
     <td>Python</td>
-    <td>PiCamera, Serial, Socket</td>
+    <td>OpenCV, Serial, Socket</td>
   </tr>
   <tr>
     <td>Arduino</td>
